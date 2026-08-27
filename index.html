@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FC Viremont | Official Website</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #07111d;
+            color: #f2f5f8;
+        }
+
+        header {
+            background: #0d1b2a;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #25384b;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 22px;
+            letter-spacing: 3px;
+        }
+
+        nav a {
+            color: #cbd5df;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 13px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        .hero {
+            padding: 90px 10%;
+            background: linear-gradient(135deg, #102a43, #091521);
+        }
+
+        .hero h2 {
+            margin: 0 0 12px;
+            font-size: 50px;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            color: #aebdcb;
+            font-size: 18px;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 1050px;
+            margin: 50px auto;
+        }
+
+        .card {
+            background: #0e1e2e;
+            border: 1px solid #20364b;
+            border-radius: 8px;
+            padding: 30px;
+            margin-bottom: 25px;
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .score {
+            font-size: 30px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+
+        .player {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .number {
+            font-size: 80px;
+            font-weight: bold;
+            color: #d8e1e9;
+        }
+
+        .player h3 {
+            margin: 0 0 8px;
+            font-size: 28px;
+        }
+
+        .muted {
+            color: #94a7b8;
+        }
+
+        .news {
+            border-top: 1px solid #263b50;
+            padding: 18px 0;
+        }
+
+        .news:first-of-type {
+            border-top: none;
+        }
+
+        footer {
+            margin-top: 80px;
+            padding: 30px;
+            text-align: center;
+            background: #0d1b2a;
+            color: #738698;
+            font-size: 13px;
+        }
+
+        @media (max-width: 700px) {
+
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 8px;
+            }
+
+            .hero h2 {
+                font-size: 38px;
+            }
+
+            .player {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+
+    <h1>FC VIREMONT</h1>
+
+    <nav>
+        <a href="#home">HOME</a>
+        <a href="#matches">MATCHES</a>
+        <a href="#team">TEAM</a>
+        <a href="#news">NEWS</a>
+    </nav>
+
+</header>
+
+
+<section class="hero" id="home">
+
+    <h2>FC VIREMONT</h2>
+
+    <p>SEMPRE AVANTI.</p>
+
+</section>
+
+
+<div class="container">
+
+
+    <!-- MATCHES -->
+
+    <section class="card" id="matches">
+
+        <h2>Latest Result</h2>
+
+        <div class="score">
+            FC Viremont 2 — 1 AC Bellafonte
+        </div>
+
+        <p>12 October 2024</p>
+
+        <p class="muted">
+            Stadio Comunale Viremont
+        </p>
+
+    </section>
+
+
+    <!-- TEAM -->
+
+    <section class="card" id="team">
+
+        <h2>First Team</h2>
+
+        <div class="player">
+
+            <div class="number">19</div>
+
+            <div>
+
+                <h3>Nicolò Arvenzi</h3>
+
+                <p>Forward — Italy</p>
+
+                <p class="muted">
+                    One of Viremont's most important attacking
+                    players during the 2024/25 campaign.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PLAYER INFORMATION -->
+
+    <section class="card">
+
+        <h2>Player Notes</h2>
+
+        <p>
+            Arvenzi joined the club's first team after progressing
+            through the youth system.
+        </p>
+
+        <p>
+            Away from football, he has a strong interest in
+            photography and technology.
+        </p>
+
+        <p class="muted">
+            His match photographs are maintained as part of
+            a personal digital archive.
+        </p>
+
+    </section>
+
+
+    <!-- NEWS -->
+
+    <section class="card" id="news">
+
+        <h2>Latest News</h2>
+
+
+        <div class="news">
+
+            <h3>Arvenzi reaches ten goals</h3>
+
+            <p class="muted">
+                The striker reached an important milestone
+                during the season.
+            </p>
+
+        </div>
+
+
+        <div class="news">
+
+            <h3>Vektor Sports renews partnership</h3>
+
+            <p class="muted">
+                FC Viremont and Vektor Sports continue their
+                partnership for the 2024/25 season.
+            </p>
+
+        </div>
+
+
+        <div class="news">
+
+            <h3>Important victory against Bellafonte</h3>
+
+            <p class="muted">
+                Viremont secured three points in a closely
+                contested match.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CLUB INFORMATION -->
+
+    <section class="card">
+
+        <h2>Club Information</h2>
+
+        <p>
+            FC Viremont
+        </p>
+
+        <p class="muted">
+            Founded 1998 · Viremont, Italy
+        </p>
+
+        <p class="muted">
+            Official partner: Vektor Sports
+        </p>
+
+    </section>
+
+
+</div>
+
+
+<footer>
+
+    FC Viremont © 2025
+
+</footer>
+
+</body>
+</html>
