@@ -4,143 +4,270 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>FC Viremont | Official Website</title>
+    <title>FC Viremont</title>
 
     <style>
         * {
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             font-family: Arial, Helvetica, sans-serif;
-            background: #07111d;
-            color: #f2f5f8;
+            background: #071522;
+            color: #e8eef5;
+            line-height: 1.6;
         }
 
-        header {
-            background: #0d1b2a;
-            padding: 22px 8%;
+        /* NAVIGATION */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #091827;
+            border-bottom: 1px solid #20374d;
+            height: 62px;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #25384b;
+            justify-content: space-between;
+            padding: 0 48px;
         }
 
-        header h1 {
-            margin: 0;
+        .logo {
             font-size: 22px;
-            letter-spacing: 3px;
-        }
-
-        nav a {
-            color: #cbd5df;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 13px;
-        }
-
-        nav a:hover {
-            color: white;
-        }
-
-        .hero {
-            padding: 90px 10%;
-            background: linear-gradient(135deg, #102a43, #091521);
-        }
-
-        .hero h2 {
-            margin: 0 0 12px;
-            font-size: 50px;
+            font-weight: bold;
             letter-spacing: 2px;
         }
 
-        .hero p {
-            color: #aebdcb;
-            font-size: 18px;
+        .nav-links {
+            display: flex;
+            gap: 30px;
         }
 
-        .container {
-            width: 80%;
-            max-width: 1050px;
-            margin: 50px auto;
+        .nav-links a {
+            color: #dce6ef;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
         }
 
-        .card {
-            background: #0e1e2e;
-            border: 1px solid #20364b;
+        .nav-links a:hover {
+            color: #79b9f2;
+        }
+
+        /* MAIN */
+        main {
+            max-width: 1450px;
+            margin: 0 auto;
+            padding: 70px 50px;
+        }
+
+        section {
+            margin-bottom: 90px;
+        }
+
+        h1 {
+            font-size: 46px;
+            margin: 0 0 8px;
+            letter-spacing: 1px;
+        }
+
+        h2 {
+            font-size: 30px;
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: #b9cde0;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: left;
+        }
+
+        .hero img {
+            display: block;
+            width: 100%;
+            max-height: 520px;
+            object-fit: contain;
+            background: #06111d;
             border-radius: 8px;
-            padding: 30px;
-            margin-bottom: 25px;
+            margin-bottom: 28px;
         }
 
-        .card h2 {
+        .hero h1 {
+            font-size: 48px;
+        }
+
+        .motto {
+            color: #8fbbe0;
+            font-size: 18px;
             margin-top: 0;
         }
 
-        .score {
-            font-size: 30px;
-            font-weight: bold;
-            margin: 20px 0;
+        /* ABOUT */
+        .about {
+            max-width: 900px;
+        }
+
+        /* TEAM */
+        .player-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 14px;
         }
 
         .player {
-            display: flex;
-            gap: 30px;
+            display: grid;
+            grid-template-columns: 65px 1fr auto;
             align-items: center;
+            min-height: 78px;
+            padding: 12px 20px;
+            background: #0d2031;
+            border: 1px solid #223d55;
+            border-radius: 7px;
         }
 
         .number {
-            font-size: 80px;
+            font-size: 26px;
             font-weight: bold;
-            color: #d8e1e9;
+            color: #9fb4c8;
         }
 
-        .player h3 {
-            margin: 0 0 8px;
-            font-size: 28px;
+        .name {
+            font-size: 18px;
+            font-weight: bold;
         }
 
-        .muted {
-            color: #94a7b8;
+        .player a {
+            color: #e8eef5;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
         }
 
-        .news {
-            border-top: 1px solid #263b50;
-            padding: 18px 0;
+        .player a:hover {
+            color: #79b9f2;
+            text-decoration: underline;
         }
 
-        .news:first-of-type {
-            border-top: none;
+        .position {
+            color: #8ea8be;
+            font-size: 14px;
+            text-align: right;
         }
 
-        footer {
-            margin-top: 80px;
-            padding: 30px;
-            text-align: center;
-            background: #0d1b2a;
-            color: #738698;
+        /* MATCHES */
+        .matches {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .match {
+            background: #0d2031;
+            border: 1px solid #223d55;
+            border-radius: 7px;
+            padding: 25px;
+        }
+
+        .match-date {
+            color: #8ea8be;
+            font-size: 14px;
+        }
+
+        .match-teams {
+            font-size: 19px;
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        .match-result {
+            margin-top: 10px;
+            color: #9fc7e9;
+        }
+
+        /* NEWS */
+        .news-item {
+            padding: 22px 0;
+            border-bottom: 1px solid #22374b;
+        }
+
+        .news-date {
+            color: #7893aa;
             font-size: 13px;
         }
 
-        @media (max-width: 700px) {
+        .news-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 5px;
+        }
 
-            header {
-                flex-direction: column;
+        /* FOOTER */
+        footer {
+            border-top: 1px solid #20374d;
+            padding: 30px 50px;
+            text-align: center;
+            color: #71889c;
+            font-size: 13px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+
+            nav {
+                padding: 0 25px;
+            }
+
+            .nav-links {
                 gap: 15px;
             }
 
-            nav a {
-                margin: 0 8px;
+            main {
+                padding: 50px 25px;
             }
 
-            .hero h2 {
-                font-size: 38px;
+            .player-list {
+                grid-template-columns: 1fr;
+            }
+
+            .matches {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            nav {
+                height: auto;
+                padding: 18px 20px;
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .nav-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            h1,
+            .hero h1 {
+                font-size: 36px;
             }
 
             .player {
-                flex-direction: column;
-                align-items: flex-start;
+                grid-template-columns: 50px 1fr;
+            }
+
+            .position {
+                grid-column: 2;
+                text-align: left;
             }
         }
     </style>
@@ -148,186 +275,263 @@
 
 <body>
 
-<header>
-
-    <h1>FC VIREMONT</h1>
-
+    <!-- NAVIGATION -->
     <nav>
-        <a href="#home">HOME</a>
-        <a href="#matches">MATCHES</a>
-        <a href="#team">TEAM</a>
-        <a href="#news">NEWS</a>
-    </nav>
 
-</header>
-
-
-<section class="hero" id="home">
-
-<img src="matchday-final.png"
-     alt="FC Viremont matchday photograph"
-     style="width:50%; height:auto; border-radius:8px; margin:0 auto 25px auto; display:block;">
-
-    <h2>FC VIREMONT</h2>
-
-    <p>SEMPRE AVANTI.</p>
-
-</section>
-
-
-<div class="container">
-
-
-    <!-- MATCHES -->
-
-    <section class="card" id="matches">
-
-        <h2>Latest Result</h2>
-
-        <div class="score">
-            FC Viremont 2 — 1 AC Bellafonte
+        <div class="logo">
+            FC VIREMONT
         </div>
 
-        <p>12 October 2024</p>
+        <div class="nav-links">
+            <a href="#home">HOME</a>
+            <a href="#matches">MATCHES</a>
+            <a href="#team">TEAM</a>
+            <a href="#news">NEWS</a>
+        </div>
 
-        <p class="muted">
-            Stadio Comunale Viremont
-        </p>
-
-    </section>
+    </nav>
 
 
-    <!-- TEAM -->
+    <main>
 
-    <section class="card" id="team">
+        <!-- HERO -->
+        <section class="hero" id="home">
 
-        <h2>First Team</h2>
+            <img
+                src="matchday-final.png"
+                alt="FC Viremont matchday photograph"
+            >
 
-        <div class="player">
+            <h1>FC VIREMONT</h1>
 
-            <div class="number">19</div>
+            <p class="motto">
+                SEMPRE AVANTI.
+            </p>
 
-            <div>
+        </section>
 
-             <h3>
-    <a href="player.html"
-       style="color:inherit; text-decoration:none;">
-        Nicolò Arvenzi
-    </a>
-</h3>
 
-                <p>Forward — Italy</p>
+        <!-- ABOUT -->
+        <section class="about">
 
-                <p class="muted">
-                    One of Viremont's most important attacking
-                    players during the 2024/25 campaign.
+            <h2>About the Club</h2>
+
+            <p>
+                FC Viremont is a football club built around tradition,
+                competition and community.
+            </p>
+
+            <p>
+                Founded around the local community, the club continues
+                to develop young players while competing at a high level.
+            </p>
+
+        </section>
+
+
+        <!-- TEAM -->
+        <section id="team">
+
+            <h2>First Team</h2>
+
+            <div class="player-list">
+
+                <div class="player">
+                    <span class="number">1</span>
+                    <span class="name">Marco Bellini</span>
+                    <span class="position">Goalkeeper</span>
+                </div>
+
+                <div class="player">
+                    <span class="number">4</span>
+                    <span class="name">Matteo Belmonte</span>
+                    <span class="position">Defender</span>
+                </div>
+
+                <div class="player">
+                    <span class="number">5</span>
+                    <span class="name">Lorenzo Ferri</span>
+                    <span class="position">Defender</span>
+                </div>
+
+                <div class="player">
+                    <span class="number">7</span>
+                    <span class="name">Luca De Luca</span>
+                    <span class="position">Midfielder</span>
+                </div>
+
+                <div class="player">
+                    <span class="number">8</span>
+                    <span class="name">Diego Martinez</span>
+                    <span class="position">Midfielder</span>
+                </div>
+
+                <div class="player">
+                    <span class="number">10</span>
+                    <span class="name">Andrea Moretti</span>
+                    <span class="position">Forward</span>
+                </div>
+
+                <div class="player">
+                    <span class="number">11</span>
+                    <span class="name">Paolo Ricci</span>
+                    <span class="position">Forward</span>
+                </div>
+
+                <div class="player">
+                    <span class="number">14</span>
+                    <span class="name">Davide Conti</span>
+                    <span class="position">Midfielder</span>
+                </div>
+
+                <div class="player">
+                    <span class="number">16</span>
+                    <span class="name">Fabio Romano</span>
+                    <span class="position">Defender</span>
+                </div>
+
+                <div class="player">
+                    <span class="number">18</span>
+                    <span class="name">Stefano Riva</span>
+                    <span class="position">Midfielder</span>
+                </div>
+
+                <!-- ONLY PLAYER WITH A PROFILE LINK -->
+                <div class="player">
+                    <span class="number">19</span>
+                    <a href="player.html">Nicolò Arvenzi</a>
+                    <span class="position">Forward</span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- MATCHES -->
+        <section id="matches">
+
+            <h2>Latest Matches</h2>
+
+            <div class="matches">
+
+                <div class="match">
+                    <div class="match-date">
+                        24 August 2026
+                    </div>
+
+                    <div class="match-teams">
+                        FC Viremont vs. AC Montelupo
+                    </div>
+
+                    <div class="match-result">
+                        2 — 1
+                    </div>
+                </div>
+
+
+                <div class="match">
+                    <div class="match-date">
+                        17 August 2026
+                    </div>
+
+                    <div class="match-teams">
+                        Virtus Garda vs. FC Viremont
+                    </div>
+
+                    <div class="match-result">
+                        1 — 1
+                    </div>
+                </div>
+
+
+                <div class="match">
+                    <div class="match-date">
+                        10 August 2026
+                    </div>
+
+                    <div class="match-teams">
+                        FC Viremont vs. US Bellagio
+                    </div>
+
+                    <div class="match-result">
+                        3 — 0
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- NEWS -->
+        <section id="news">
+
+            <h2>News</h2>
+
+            <div class="news-item">
+
+                <div class="news-date">
+                    28 August 2026
+                </div>
+
+                <div class="news-title">
+                    Viremont prepare for the next league fixture
+                </div>
+
+                <p>
+                    The first team continues preparations ahead of
+                    the upcoming weekend match.
                 </p>
 
             </div>
 
-        </div>
 
-    </section>
+            <div class="news-item">
 
+                <div class="news-date">
+                    21 August 2026
+                </div>
 
-    <!-- PLAYER INFORMATION -->
+                <div class="news-title">
+                    Strong performance at home
+                </div>
 
-    <section class="card">
+                <p>
+                    FC Viremont secured another positive result
+                    in front of the home supporters.
+                </p>
 
-        <h2>Player Notes</h2>
-
-        <p>
-            Arvenzi joined the club's first team after progressing
-            through the youth system.
-        </p>
-
-        <p>
-            Away from football, he has a strong interest in
-            photography and technology.
-        </p>
-
-        <p class="muted">
-            His match photographs are maintained as part of
-            a personal digital archive.
-        </p>
-
-    </section>
+            </div>
 
 
-    <!-- NEWS -->
+            <div class="news-item">
 
-    <section class="card" id="news">
+                <div class="news-date">
+                    14 August 2026
+                </div>
 
-        <h2>Latest News</h2>
+                <div class="news-title">
+                    Youth players join first-team training
+                </div>
 
+                <p>
+                    Several players from the club's youth system
+                    took part in first-team training this week.
+                </p>
 
-        <div class="news">
+            </div>
 
-            <h3>Arvenzi reaches ten goals</h3>
+        </section>
 
-            <p class="muted">
-                The striker reached an important milestone
-                during the season.
-            </p>
-
-        </div>
-
-
-        <div class="news">
-
-            <h3>Vektor Sports renews partnership</h3>
-
-            <p class="muted">
-                FC Viremont and Vektor Sports continue their
-                partnership for the 2024/25 season.
-            </p>
-
-        </div>
+    </main>
 
 
-        <div class="news">
+    <footer>
 
-            <h3>Important victory against Bellafonte</h3>
+        FC Viremont &copy; 2026 — Sempre Avanti.
 
-            <p class="muted">
-                Viremont secured three points in a closely
-                contested match.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- CLUB INFORMATION -->
-
-    <section class="card">
-
-        <h2>Club Information</h2>
-
-        <p>
-            FC Viremont
-        </p>
-
-        <p class="muted">
-            Founded 1998 · Viremont, Italy
-        </p>
-
-        <p class="muted">
-            Official partner: Vektor Sports
-        </p>
-
-    </section>
-
-
-</div>
-
-
-<footer>
-
-    FC Viremont © 2025
-
-</footer>
+    </footer>
 
 </body>
 </html>
